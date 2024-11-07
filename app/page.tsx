@@ -99,36 +99,58 @@ export default function LandingPage() {
     </div>
   </div>
 </section>
+{/* Member Introduction Section */}
+<section className="bg-gray-900 py-20">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-10 text-center text-white">멤버 소개</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+      {[
+        {
+          name: '박현호', // 이름
+          role: '팀장', // 직책
+          description: '팀을 이끄는 리더로, 프로젝트의 전반적인 방향을 맡고 있습니다.',
+          image: img01, // 멤버 이미지 경로
+        },
+        {
+          name: '이동건', // 기획자 이름
+          role: '기획자', // 직책
+          description: '게임의 콘셉트 및 시스템을 기획하고, 게임의 흐름을 설계합니다.',
+          image: img01, // 기획자 이미지 경로
+        },
+        {
+          name: '박수빈 안시현 이효준 천현수',
+          role: '디자이너',
+          description: '게임 내 그래픽과 UI를 담당하며, 사용자의 경험을 최적화합니다.',
+          image: img01, // 멤버 이미지 경로
+        },
+        {
+          name: '김주영 이신우 이준원 이수환 김유찬',
+          role: '개발자',
+          description: '백엔드 및 서버 개발을 담당하며, 안정적인 게임 환경을 제공합니다.',
+          image: img01, // 멤버 이미지 경로
+        },
+      ].map((member, index) => (
+        <Card key={index} className="bg-gray-800 text-white">
+          <CardHeader className="text-center">
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={200}
+              height={200}
+              className="rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">{member.name}</h3>
+            <p className="text-sm font-light">{member.role}</p>
+          </CardHeader>
+          <CardContent className="p-4">
+            <p>{member.description}</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
-
-      {/* Pricing Section */}
-      <section className="bg-gray-900 py-20">
-        <div className="container mx-auto px-4 text-white">
-          <h2 className="text-3xl font-bold mb-10 text-center">Invest in Your Survival</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              { name: 'Basic Plan', price: '$29.99', features: ['Access to all base game content', 'Standard character customization', 'Regular game updates'] },
-              ].map((plan, index) => (
-              <Card key={index} className="bg-gray-800">
-                <CardHeader>
-                  <CardTitle>{plan.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-bold mb-4">{plan.price}</p>
-                  <ul className="list-disc pl-5">
-                    {plan.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Choose Plan</Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20">
