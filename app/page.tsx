@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Facebook, Twitter, Instagram } from 'lucide-react'
@@ -158,9 +158,9 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold mb-10 text-center">Unveiling Clarity: Your Questions Answered</h2>
           <Accordion type="single" collapsible className="w-full">
             {[
-              { question: "Is 'Futuristic Dystopia' a multiplayer game?", answer: "Yes, it features both single-player and multiplayer modes." },
-              { question: "What are the system requirements?", answer: "The game requires a modern gaming PC or console. Specific requirements can be found on our technical specs page." },
-              { question: "How often do you release new content?", answer: "We aim to release major updates quarterly, with smaller patches and events occurring more frequently." },
+              { question: "기술 스택은 어떤 걸 사용했나요?", answer: "Unity, Adobe Photoshop, C#, Aseprite 등을 사용하였습니다." },
+              { question: "신규 컨텐츠 업데이트 주기는 어떻게 될 예정인가요?", answer: "일주일마다 버그 픽스를 하고, 반 년마다 대규모 업데이트를 하여 신규 컨텐츠를 제작할 예정입니다." },
+              { question: "게임 내에서 구매할 수 있는 아이템은 무엇이 있나요?", answer: "야생 동물들을 포획할 수 있는 그물총, 앞을 밝혀 깊은 숲으로 들어갈 수 있게 되는 랜턴 등을 구입할 수 있습니다." },
               { question: "Da'at엔 어떤 학생들이 있나요?", answer: "Da'at엔 게임 개발의 상위 1% 엘리트들만 모여있습니다." }
             ].map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
@@ -172,27 +172,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 py-10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p>&copy; 2024 Futuristic Dystopia. All rights reserved.</p>
-            </div>
-            <div className="flex space-x-4">
-              <Facebook className="w-6 h-6" />
-              <Twitter className="w-6 h-6" />
-              <Instagram className="w-6 h-6" />
-            </div>
-            <div className="mt-4 md:mt-0">
-              <form className="flex">
-                <Input type="email" placeholder="Enter your email" className="mr-2" />
-                <Button type="submit" className="bg-blue-600 hover:bg-blue-700">Subscribe</Button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
