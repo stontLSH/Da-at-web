@@ -161,7 +161,7 @@ export default function LandingPage() {
               { question: "Is 'Futuristic Dystopia' a multiplayer game?", answer: "Yes, it features both single-player and multiplayer modes." },
               { question: "What are the system requirements?", answer: "The game requires a modern gaming PC or console. Specific requirements can be found on our technical specs page." },
               { question: "How often do you release new content?", answer: "We aim to release major updates quarterly, with smaller patches and events occurring more frequently." },
-              { question: "Da'at엔 어떤 학생들이 있나요?", answer: "Da'at엔 게임 개발의 엘리트들만 모여있습니다. 개발 인원은 김주영, 이신우, 박수빈, 박현호, 이동건, 이준원, 안시현, 김유찬, 이수환, 이효준, 천현수로 이루어져 있습니다." }
+              { question: "Da'at엔 어떤 학생들이 있나요?", answer: "Da'at엔 게임 개발의 상위 1% 엘리트들만 모여있습니다." }
             ].map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger>{item.question}</AccordionTrigger>
